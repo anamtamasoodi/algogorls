@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-export const HomePage = ({}) => {
+const HomePage = ({}) => {
   const OliveGreenRectangleFunction = (e, name) => {
     alert(`${name} was clicked`);
   };
-  const TropicalRainForestRectangleFunction = (e, name) => {
+  const GenerateEmailFunction = (e, name) => {
     alert(`${name} was clicked`);
   };
   const SkyBlueRectangleFunction = (e, name) => {
@@ -53,7 +53,7 @@ export const HomePage = ({}) => {
       <Group1>
         <TropicalRainForestRectangle
           onClick={(e) =>
-            TropicalRainForestRectangleFunction(
+            GenerateEmailFunction(
               e,
               "TropicalRainForestRectangle"
             )
@@ -252,3 +252,5 @@ const Text1 = styled.div`
   text-align: center;
   box-sizing: border-box;
 `;
+
+export default HomePage
