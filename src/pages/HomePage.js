@@ -11,10 +11,24 @@ export const HomePage = ({}) => {
   const SkyBlueRectangleFunction = (e, name) => {
     alert(`${name} was clicked`);
   };
+
+  const HomePage = styled.div`
+  position: relative;
+  gap: 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px 0px 394px 0px;
+  box-sizing: border-box;
+  background-color: #f3f3f3;
+  overflow: hidden;
+`;
+
   return (
     <HomePage>
       <Element1>
-        <Image1 src={`undefined`} />
+        <Image1 src={`https://file.rendit.io/n/AG1desX1ZV5IHSnOL6pt.png`} />
       </Element1>
       <Paragraph1>
         Environmentalists?
@@ -57,18 +71,7 @@ export const HomePage = ({}) => {
   );
 };
 
-const HomePage = styled.div`
-  position: relative;
-  gap: 38px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 0px 0px 394px 0px;
-  box-sizing: border-box;
-  background-color: #f3f3f3;
-  overflow: hidden;
-`;
+
 const Element1 = styled.div`
   left: 737px;
   top: 70px;

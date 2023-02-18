@@ -4,19 +4,7 @@ import './index.css';
 
 // connecting all the pages
 import HomePage from "./pages/HomePage";
-import App from './App';
 
-export default function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
-}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
