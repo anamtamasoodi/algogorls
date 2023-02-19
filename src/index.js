@@ -18,13 +18,16 @@ import {
 
 // connecting all the pages
 import HomePage from "./pages/HomePage";
+import GenerationPage from "./pages/GenerationPage";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
       <Route path="/" element={<HomePage />} />
+      <Route path="/GenerationPage" element={<GenerationPage />} />
       </Routes>
+
     </BrowserRouter>
   );
 }
