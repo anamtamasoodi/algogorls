@@ -145,7 +145,7 @@ code {
   text-align: center;
   box-sizing: border-box;
 }
-.oliveGreenRectangle1 {
+.GenerateNowRectangle {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -164,7 +164,7 @@ code {
   background-color: #96ac51;
   cursor: pointer;
 }
-.oliveGreenRectangle1:hover {
+.GenerateNowRectangle:hover {
   opacity: 70%;
 }
 .text6 {
@@ -214,7 +214,7 @@ code {
   min-width: 0px;
   min-height: 0px;
   align-self: flex-start;
-  margin: 0px 0px 331px 0px;
+  margin: 0px 0px 200px 0px;
   box-sizing: border-box;
 }
 .paragraph4 {

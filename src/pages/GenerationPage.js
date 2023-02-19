@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import Header from "./Header";
 
 const GenerationPage = ({}) => {
     const [name , setName] = useState('');
@@ -57,18 +58,9 @@ const GenerationPage = ({}) => {
 
     return (
         <GenerationPage>
+        <Header>
+        </Header>
         <Group>
-            <TimberwolfRectangle>
-            <Text11>Devpost</Text11>
-            <OliveGreenRectangle1
-                onClick={(e) =>
-                OliveGreenRectangle1Function(e, "OliveGreenRectangle1")
-                }
-            >
-                <Text10>Generate Now</Text10>
-            </OliveGreenRectangle1>
-            </TimberwolfRectangle>
-            <Logo1 src={`https://file.rendit.io/n/50xiCbEwHSkpnJk8czFj.png`} />
             <Text8>Write now, right now.</Text8>
             <Group2>
                 <Paragraph4>
