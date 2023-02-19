@@ -582,3 +582,30 @@ code {
   text-align: center;
   box-sizing: border-box;
 }
+
+.FormRectangle {
+  width: 312px;
+  height: 51px;
+  left: 303px;
+  top: 110px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px;
+  padding-top: 15px;
+  padding-right: 29px;
+  padding-bottom: 14px;
+  padding-left: 29px;
+  border-width: 0px;
+  border-radius: 50px;
+  border-style: solid;
+  border-color: #003b30;
+  box-sizing: content-box;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.FormRectangle:hover {
+  opacity: 70%;
+}
