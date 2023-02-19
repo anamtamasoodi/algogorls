@@ -6,12 +6,17 @@ import "./Components.css";
 import Sitting from '../images/Sitting.svg';
 import { Redirect } from 'react-router-dom';
 
+
 const GenerationPage = ({}) => {
     const [name , setName] = useState('');
     const [location , setLocation] = useState('');
     const [issue , setIssue] = useState('');
     const [story , setStory] = useState('');
     const [facts , setFacts] = useState('');
+<<<<<<< HEAD
+
+=======
+>>>>>>> dae30c317b66a29bcd63cad58ba4873cc6c067ce
 
     const handleNameChange =(e)=>{
         setName(e.target.value);
@@ -33,7 +38,29 @@ const GenerationPage = ({}) => {
     }
 
     const handleSubmit=(e)=>{ 
+<<<<<<< HEAD
         window.location.href = '/ResultsPage'
+=======
+        alert('A form was submitted with Name :"' + name +
+        '" , location :"'+location +'" and issue :"' + issue + '"');
+        e.preventDefault();
+        const formData = {"name": name, "location": location, "issue": issue, "facts": facts, "story": story};
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://127.0.0.1:5000/');
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.timeout = 30000; // 10 seconds
+        const data = JSON.stringify(formData)
+        console.log(data);
+        xhr.send(data);
+        /* fetch("http://127.0.0.1:5000/",{
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => console.log(data)); */
+        window.location.href = '/ResultsPage';
+>>>>>>> origin/master
     }
 
     const OliveGreenRectangle1Function = (e, name) => {
@@ -70,8 +97,11 @@ const GenerationPage = ({}) => {
 
     return (
         <div>
+<<<<<<< HEAD
+=======
         <Header>
         </Header>
+>>>>>>> dae30c317b66a29bcd63cad58ba4873cc6c067ce
         <Text8>Write now, right now.</Text8>
         <Paragraph4>Use our AI-powered generator to write persuasive and effective text instantly.</Paragraph4>
         <div>

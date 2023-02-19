@@ -7,6 +7,7 @@ import {
 	Link
 } from 'react-router-dom';
 import HomePage from "./pages/HomePage";
+import React, {useState, useEffect} from 'react';
 
 class App extends Component {
   render() {
