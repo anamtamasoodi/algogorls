@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
+
 const GenerationPage = ({}) => {
     const [name , setName] = useState('');
     const [location , setLocation] = useState('');
     const [issue , setIssue] = useState('');
+    const [story , setStory] = useState('');
+    const [facts , setFacts] = useState('');
+
 
     const handleNameChange =(e)=>{
         setName(e.target.value);
@@ -18,9 +22,33 @@ const GenerationPage = ({}) => {
         setIssue(e.target.value);
     }
 
+    const handleStoryChange =(e)=>{
+        setStory(e.target.value);
+    }
+    const handleFactsChange =(e)=>{
+        setFacts(e.target.value);
+    }
+
     const handleSubmit=(e)=>{ 
         alert('A form was submitted with Name :"' + name +
         '" , location :"'+location +'" and issue :"' + issue + '"');
+        e.preventDefault();
+        const formData = {"name": name, "location": location, "issue": issue, "facts": facts, "story": story};
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://127.0.0.1:5000/');
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.timeout = 30000; // 10 seconds
+        const data = JSON.stringify(formData)
+        console.log(data);
+        xhr.send(data);
+        /* fetch("http://127.0.0.1:5000/",{
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => console.log(data)); */
+        window.location.href = '/ResultsPage';
     }
 
     const OliveGreenRectangle1Function = (e, name) => {
@@ -56,70 +84,50 @@ const GenerationPage = ({}) => {
     `;
 
     return (
-        <GenerationPage>
-        <Group>
-            <TimberwolfRectangle>
-            <Text11>Devpost</Text11>
-            <OliveGreenRectangle1
-                onClick={(e) =>
-                OliveGreenRectangle1Function(e, "OliveGreenRectangle1")
-                }
-            >
-                <Text10>Generate Now</Text10>
-            </OliveGreenRectangle1>
-            </TimberwolfRectangle>
-            <Logo1 src={`https://file.rendit.io/n/50xiCbEwHSkpnJk8czFj.png`} />
-            <Text8>Write now, right now.</Text8>
-            <Group2>
-                <Paragraph4>
-                Use our AI-powered generator to write persuasive and effective text
-                instantly.
-                </Paragraph4>
-                <Text7>What’s your full name?</Text7>
-            
-            <Group3>
-            
-                
-            <form onSubmit={(e) => {handleSubmit(e)}}>
-                    <fieldset>
-                        <label>
-                        <p>What's your full name?</p>
-                        <input type="text" value={name} required onChange={(e) => {handleNameChange(e)}} />
-                        </label>
-                        <label>
-                        <p>Where are you located?</p>
-                        <input type="text" value={location} required onChange={(e) => {handleLocationChange(e)}} />
-                        </label>
-                        <label>
-                        <p>What issue are you concerned about?</p>
-                        <input type="text" value={issue} required onChange={(e) => {handleIssueChange(e)}} />
-                        </label>
-                        <br></br>
-                        <input type="submit" value="Submit"/>
-                    </fieldset>
-                </form>
+        <div>
+        <Text8>Write now, right now.</Text8>
+        <Paragraph4>Use our AI-powered generator to write persuasive and effective text instantly.</Paragraph4>
+        <div>
+            <form onSubmit={handleSubmit} margin-right="300px">
+                <fieldset className="wrapper">
+                    <label>
+                    <EnterYourName>What's your full name?</EnterYourName>
+                    <br></br>
+                    <input type="text" value={name} required onChange={handleNameChange} />
+                    </label>
+                    <br></br>
+                    <label>
+                    <br></br>
+                    <EnterYourName>Where are you located?</EnterYourName>
+                    <br></br>
+                    <input type="text" value={location} required onChange={handleLocationChange}  />
+                    <br></br>
+                    </label>
+                    <br></br>
+                    <label>
+                    <EnterYourName>What issue are you concerned about?</EnterYourName>
+                    <br></br>
+                    <input type="text" value={issue} required onChange={handleIssueChange} />
+                    <br></br>
+                    </label>
+                    <br></br>
+                    <label>
+                    <EnterYourName>What's your story?</EnterYourName>
+                    <br></br>
+                    <input type="text" value={story} required onChange={handleStoryChange} />
+                    <br></br>
+                    </label>
+                    <label>
+                    <EnterYourName>What facts would you like to include?</EnterYourName>
+                    <br></br>
+                    <input type="text" value={facts} required onChange={handleFactsChange} />
+                    <br></br>
+                    </label>
+                    <input type="submit" value="Submit"/>
+                </fieldset>
+            </form>
+        </div>
 
-                <FormRectangle>
-                    <EnterYourName1>
-                    |<EnterYourName>Enter your name...</EnterYourName>
-                    </EnterYourName1>
-                </FormRectangle>
-                <Text5>Where are you located?</Text5>
-                <WhiteRectangle3
-                    onClick={(e) => WhiteRectangle3Function(e, "WhiteRectangle3")}
-                >
-                    <EnterYourLocation1>
-                    |<EnterYourName>Enter your location...</EnterYourName>
-                    </EnterYourLocation1>
-                </WhiteRectangle3>
-                <Text3>What issue are you concerned about?</Text3>
-                <WhiteRectangle2
-                    onClick={(e) => WhiteRectangle2Function(e, "WhiteRectangle2")}
-                >
-                    <EnterTheIssue1>
-                    |<EnterYourName>Enter the issue...</EnterYourName>
-                    </EnterTheIssue1>
-                </WhiteRectangle2>
                 <Image1
                     src={`https://file.rendit.io/n/GJC58eQ8WbxwKj2qd0ZW.svg`}
                 />
@@ -159,9 +167,8 @@ const GenerationPage = ({}) => {
                     </Text1>
                 </WhiteRectangle>
                 </Group5>
-            </Group3>
-            </Group2>
-        </Group>
+            
+
         <OliveGreenRectangle
             onClick={(e) => OliveGreenRectangleFunction(e, "OliveGreenRectangle")}
         >
@@ -185,16 +192,16 @@ const GenerationPage = ({}) => {
             </Text12>
             <Image1 src={`https://file.rendit.io/n/50xiCbEwHSkpnJk8czFj.png`} />
         </Group1>
-        </GenerationPage>
+        </div>
     );
 };
 
 const EnterYourName = styled.div`
-  display: contents;
-  color: rgba(0, 0, 0, 0.49);
-  font-size: 18px;
-  font-weight: 500;
-  font-family: Montserrat;
+    display: contents;
+    color: rgba(0, 0, 0, 0.49);
+    font-size: 25px;
+    font-weight: 500;
+    font-family: Montserrat;
 `;
 const Image1 = styled.img`
   min-width: 0px;
@@ -204,7 +211,7 @@ const Image1 = styled.img`
 `;
 
 const Group = styled.div`
-  width: 107.08%;
+  width: 100%;
   position: relative;
   gap: 95px;
   display: flex;
@@ -320,12 +327,15 @@ const Text7 = styled.div`
   box-sizing: border-box;
 `;
 const Paragraph4 = styled.div`
-  position: relative;
-  margin: 0px 202px 0px 0px;
-  font-size: 25px;
-  font-family: Montserrat;
-  text-align: center;
-  box-sizing: border-box;
+    font-size: 25px;
+    font-family: Montserrat;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 175px;
+    margin-bottom: 50px;
+    text-align: center;
+  
 `;
 const Group3 = styled.div`
   width: 100%;
@@ -393,7 +403,7 @@ const FormRectangle = styled.button`
   } ;
 `;
 const EnterYourName1 = styled.div`
-  margin: 0px 83px 0px 0px;
+  margin: 5px 83px 5px 5px;
   font-size: 18px;
   font-weight: 500;
   font-family: Montserrat;

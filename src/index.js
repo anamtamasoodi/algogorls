@@ -19,6 +19,7 @@ import {
 // connecting all the pages
 import HomePage from "./pages/HomePage";
 import GenerationPage from "./pages/GenerationPage";
+import ResultsPage from "./pages/ResultsPage";
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
       <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/GenerationPage" element={<GenerationPage />} />
+      <Route path="/ResultsPage" element={<ResultsPage />} />
+
       </Routes>
 
     </BrowserRouter>
