@@ -1,145 +1,153 @@
 import React from "react";
 import styled from "styled-components";
 import Header from "./Header";
+import HeroGraphic from '../images/HeroGraphic.png';
+import Smog from '../images/Smog.svg';
+import ArrowDown from '../images/Arrow-Down.png';
 
 const HomePage = ({}) => {
 
-   // functions
-   const GenerateNowButton = (e, name) => {
-      alert(`${name} was clicked`);
-   };
-   const SkyBlueRectangle1Function = (e, name) => {
-      alert(`${name} was clicked`);
-   };
-   const SkyBlueRectangleFunction = (e, name) => {
-      alert(`${name} was clicked`);
-   };
-   const WhiteRectangleFunction = (e, name) => {
-      alert(`${name} was clicked`);
-   };
-   const WhiteRectangle2Function = (e, name) => {
-      alert(`${name} was clicked`);
-   };
-   const EmailButtonFunction = (e, name) => {
-      alert(`${name} was clicked`);
-   };
-   const EmailButton2Function = (e, name) => {
-      alert(`${name} was clicked`);
-   };
+// functions
+const GenerateNowButton = (e, name) => {
+   alert(`${name} was clicked`);
+};
+const SkyBlueRectangle1Function = (e, name) => {
+   alert(`${name} was clicked`);
+};
+const SkyBlueRectangleFunction = (e, name) => {
+   alert(`${name} was clicked`);
+};
+const WhiteRectangleFunction = (e, name) => {
+   alert(`${name} was clicked`);
+};
+const WhiteRectangle2Function = (e, name) => {
+   alert(`${name} was clicked`);
+};
+const EmailButtonFunction = (e, name) => {
+   alert(`${name} was clicked`);
+};
+const EmailButton2Function = (e, name) => {
+   alert(`${name} was clicked`);
+};
 
 
-   const HomePage = styled.div`
-   position: relative;
-   gap: 103px;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   padding: 0px 0px 175px 0px;
-   box-sizing: border-box;
-   background-color: #f3f3f3;
-   overflow: hidden;
-   `;
+const HomePage = styled.div`
+position: relative;
+gap: 103px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding: 0px 0px 175px 0px;
+box-sizing: border-box;
+background-color: #f3f3f3;
+overflow: hidden;
+`;
 
-   return (
-      <HomePage>
-         <Header>
-         </Header>
-         <Text8>
-         Made by Team AlgoGorls at ElleHacks
-         <Paragraph6>
-            <br />
-            UI/UX Designer: Kelly Owenya
-            <br />
-            Front-End Developer: Anamta Masoodi
-            <br />
-            Back-End Developer: Cecelia Nydam
-         </Paragraph6>
-         </Text8>
-         <Paragraph5>
-         Environmentalists?
+return (
+   <HomePage>
+      <Header>
+      </Header>
+      <Text8>
+      Made by Team AlgoGorls at ElleHacks
+      <Paragraph6>
          <br />
-         Meet artificial <br />
-         intelligence.
-         </Paragraph5>
-         <Text3>
-         Fight for the issues
+         UI/UX Designer: Kelly Owenya
          <br />
-         you care about.
-         </Text3>
-         <Group>
-         <Group2>
-            <Paragraph4>
-               Effortlessly advocate for the earth with EcoEcho.
-            </Paragraph4>
-            <Group3>
-               <TropicalRainForestRectangle
-               onClick={(e) =>
-                  GenerateNowButton(
-                     e,
-                     "TropicalRainForestRectangle"
-                  )
-               }
-               >
-               <Text5>Generate an email</Text5>
-               </TropicalRainForestRectangle>
-               <SkyBlueRectangle1
-               onClick={(e) => SkyBlueRectangle1Function(e, "SkyBlueRectangle1")}
-               >
-               <Text4>Make a petition</Text4>
-               </SkyBlueRectangle1>
-            </Group3>
-         </Group2>
-         <SkyBlueRectangle
-            onClick={(e) => SkyBlueRectangleFunction(e, "SkyBlueRectangle")}
-         >
-            <Text2>Find your MP</Text2>
-         </SkyBlueRectangle>
-         <Paragraph1>
-            Advocacy made more accessible than ever — make a change with just a
-            few clicks!
-         </Paragraph1>
-         <Paragraph>
-            Amplify your voice and get in touch with lawmakers.
-         </Paragraph>
-         <PoliticianGraphic>
-            <WhiteRectangle
-               onClick={(e) => WhiteRectangleFunction(e, "WhiteRectangle")}
+         Front-End Developer: Anamta Masoodi
+         <br />
+         Back-End Developer: Cecelia Nydam
+      </Paragraph6>
+      </Text8>
+      <Paragraph5>
+      Environmentalists?
+      <br />
+      Meet artificial <br />
+      intelligence.
+      </Paragraph5>
+      <Text3>
+      Fight for the issues
+      <br />
+      you care about.
+      </Text3>
+      <Group>
+      <Group2>
+         <Paragraph4>
+            Effortlessly advocate for the earth with EcoEcho.
+         </Paragraph4>
+         <Group3>
+            <TropicalRainForestRectangle
+            onClick={(e) =>
+               GenerateNowButton(
+                  e,
+                  "TropicalRainForestRectangle"
+               )
+            }
             >
-               <EnterYourLocation1>
-               |<EnterYourLocation>Enter your location...</EnterYourLocation>
-               </EnterYourLocation1>
-            </WhiteRectangle>
-         </PoliticianGraphic>
-         <Element1>
-            <Image1 src={`undefined`} />
-         </Element1>
-         </Group>
-         <Group1>
-         <Logo src={`https://file.rendit.io/n/vtmrLJRAlj5fZtwXpbxK.png`} />
-         <Paragraph3>
-            At EcoEcho, we believe that the health of our planet is one of the
-            most important issues we face today. The Earth is our home, and we are
-            committed to doing everything we can to protect it. That's why we
-            created EcoEcho - to make it easier for people like you to speak up
-            for the planet and advocate for change.
-         </Paragraph3>
-         <WhiteRectangle2
-            onClick={(e) => WhiteRectangle2Function(e, "WhiteRectangle2")}
+            <Text5>Generate an email</Text5>
+            </TropicalRainForestRectangle>
+            <SkyBlueRectangle1
+            onClick={(e) => SkyBlueRectangle1Function(e, "SkyBlueRectangle1")}
+            >
+            <Text4>Make a petition</Text4>
+            </SkyBlueRectangle1>
+         </Group3>
+      </Group2>
+      <SkyBlueRectangle
+         onClick={(e) => SkyBlueRectangleFunction(e, "SkyBlueRectangle")}
+      >
+         <Text2>Find your MP</Text2>
+      </SkyBlueRectangle>
+      <Paragraph1>
+         Advocacy made more accessible than ever — make a change with just a
+         few clicks!
+      </Paragraph1>
+      <Paragraph>
+         Amplify your voice and get in touch with lawmakers.
+      </Paragraph>
+      <PoliticianGraphic>
+         <WhiteRectangle
+            onClick={(e) => WhiteRectangleFunction(e, "WhiteRectangle")}
          >
-            <EnterAGlobalIssue1>
-               |<EnterAGlobalIssue>Enter a global issue...</EnterAGlobalIssue>
-            </EnterAGlobalIssue1>
-            <Image3 src={`https://file.rendit.io/n/GRAhamvsgtdqWMOOOj4R.png`} />
-         </WhiteRectangle2>
-         <Image2 src={`https://file.rendit.io/n/nlYO09DU9uViq2Qhgf3p.svg`} />
-         <OliveGreenRectangle
-            onClick={(e) => GenerateNowButton(e, "OliveGreenRectangle")}
-         >
-            <Text1>Generate Now</Text1>
-         </OliveGreenRectangle>
-         </Group1>
-      </HomePage>
-   );
+            <EnterYourLocation1>
+            |<EnterYourLocation>Enter your location...</EnterYourLocation>
+            </EnterYourLocation1>
+         </WhiteRectangle>
+      </PoliticianGraphic>
+      <Element1>
+         <img src={HeroGraphic} />
+      </Element1>
+      </Group>
+      <Group1>
+      <Logo src={Logo1} />
+      <Paragraph3>
+         At EcoEcho, we believe that the health of our planet is one of the
+         most important issues we face today. The Earth is our home, and we are
+         committed to doing everything we can to protect it. That's why we
+         created EcoEcho - to make it easier for people like you to speak up
+         for the planet and advocate for change.
+      </Paragraph3>
+      <WhiteRectangle2
+         onClick={(e) => WhiteRectangle2Function(e, "WhiteRectangle2")}
+      >
+         <EnterAGlobalIssue1>
+            |<EnterAGlobalIssue>Enter a global issue...</EnterAGlobalIssue>
+         </EnterAGlobalIssue1>
+
+         <Element3>
+         <img src={ArrowDown} />
+         </Element3>
+      </WhiteRectangle2>
+      <Element2>
+         <img src={Smog} />
+      </Element2>
+      <OliveGreenRectangle
+         onClick={(e) => GenerateNowButton(e, "OliveGreenRectangle")}
+      >
+         <Text1>Generate Now</Text1>
+      </OliveGreenRectangle>
+      </Group1>
+   </HomePage>
+);
 };
 
 
@@ -195,7 +203,7 @@ const Image6 = styled.img`
    width: 843px;
    height: 576px;
    left: 60px;
-   top: 70px;
+   top: 300px;
    position: absolute;
    color: #96ac51;
    font-size: 68px;
@@ -231,12 +239,10 @@ const Image6 = styled.img`
    flex-direction: column;
    justify-content: flex-start;
    align-self: flex-start;
-   margin: 0px 0px 1px 0px;
+   margin: 0px 0px 0px 0px;
    padding: 0px;
-   padding-top: 15px;
-   padding-right: 38px;
-   padding-bottom: 17px;
-   padding-left: 38px;
+   padding-right: 10px;
+   padding-left: 10px;
    border-width: 0px;
    border-radius: 50px;
    border-style: solid;
@@ -262,12 +268,13 @@ const Image6 = styled.img`
    width: 843px;
    height: 576px;
    left: 60px;
-   top: 1359px;
+   top: 1500px;
    position: absolute;
    color: #96ac51;
    font-size: 60px;
    font-family: Unbounded;
    box-sizing: border-box;
+   padding-top: 250px
    `;
    const Group = styled.div`
    width: 102.92%;
@@ -284,11 +291,12 @@ const Image6 = styled.img`
    width: 48.29%;
    position: relative;
    gap: 20px;
+   top: 485px;
    display: flex;
    flex-direction: column;
    justify-content: flex-start;
    align-self: flex-start;
-   margin: 0px 0px 794px 0px;
+   margin: 0px 0px 0px 35px;
    box-sizing: border-box;
    `;
    const Logo1 = styled.img`
@@ -299,7 +307,7 @@ const Image6 = styled.img`
    box-sizing: border-box;
    `;
    const Paragraph4 = styled.div`
-   align-self: flex-end;
+   margin-left: 40px;
    font-size: 25px;
    font-family: Montserrat;
    box-sizing: border-box;
@@ -319,11 +327,12 @@ const Image6 = styled.img`
    flex-direction: column;
    justify-content: flex-start;
    align-self: flex-start;
+   white-space: nowrap;
    padding: 0px;
-   padding-top: 16px;
-   padding-right: 27px;
-   padding-bottom: 18px;
-   padding-left: 27px;
+   padding-top: 15px;
+   padding-right: 32px;
+   padding-bottom: 15px;
+   padding-left: 32px;
    border-width: 0px;
    border-radius: 50px;
    border-style: solid;
@@ -378,17 +387,15 @@ const Image6 = styled.img`
    const SkyBlueRectangle = styled.button`
    width: 222px;
    height: 51.3px;
-   left: 1159px;
+   right: 85px;
    top: 1296px;
    position: absolute;
    display: flex;
    flex-direction: column;
-   justify-content: flex-start;
+   justify-content: center;
    padding: 0px;
-   padding-top: 13.4px;
-   padding-right: 50px;
-   padding-bottom: 15.9px;
-   padding-left: 50px;
+   padding-right: 15px;
+   padding-left: 15px;
    border-width: 0px;
    border-radius: 50px;
    border-style: solid;
@@ -412,7 +419,7 @@ const Image6 = styled.img`
    const Paragraph1 = styled.div`
    width: 635px;
    height: 60px;
-   left: 755px;
+   right: 85px;
    top: 1212px;
    position: absolute;
    font-size: 25px;
@@ -423,7 +430,7 @@ const Image6 = styled.img`
    const Paragraph = styled.div`
    width: 711px;
    height: 321px;
-   left: 681px;
+   right: 85px;
    top: 936px;
    position: absolute;
    color: #96ac51;
@@ -451,6 +458,8 @@ const Image6 = styled.img`
    flex-direction: column;
    justify-content: flex-start;
    align-self: flex-end;
+   position: absolute;
+   right: -25px;
    padding: 0px;
    padding-top: 15px;
    padding-right: 29px;
@@ -489,17 +498,38 @@ const Image6 = styled.img`
    flex-direction: column;
    justify-content: flex-start;
    align-self: flex-start;
-   margin: 135px 0px 606px 0px;
+   margin: -65px 0px 606px 0px;
    box-sizing: border-box;
    background-size: cover;
    background-image: url("https://file.rendit.io/n/lf3VVT6BMTTpt6yemEvN.svg");
    `;
-   const Image1 = styled.img`
-   min-width: 0px;
-   min-height: 0px;
+
+   const Element2 = styled.div`
+   width: 46.84%;
+   position: relative;
+   display: flex;
+   position: absolute;
+   right: 0px;
+   flex-direction: column;
+   justify-content: flex-start;
    align-self: flex-start;
+   margin: 65px 0px 606px 0px;
    box-sizing: border-box;
+   background-size: cover;
    `;
+
+   const Element3 = styled.div`
+   position: relative;
+   display: flex;
+   position: absolute;
+   right: 10px;
+   top: 15px;
+   flex-direction: column;
+   justify-content: flex-start;
+   box-sizing: border-box;
+   background-size: cover;
+   `;
+ 
    const Group1 = styled.div`
    width: 93.82%;
    height: 886px;
@@ -523,7 +553,7 @@ const Image6 = styled.img`
    width: 710px;
    height: 180px;
    left: 0px;
-   top: 244px;
+   top: 305px;
    position: absolute;
    font-size: 25px;
    font-family: Montserrat;
@@ -533,17 +563,13 @@ const Image6 = styled.img`
    width: 437px;
    height: 56px;
    left: 0px;
-   top: 453px;
+   top: 505px;
    position: absolute;
    gap: 159px;
    display: flex;
    flex-direction: row;
    justify-content: space-between;
    padding: 0px;
-   padding-top: 13px;
-   padding-right: 16px;
-   padding-bottom: 13px;
-   padding-left: 34px;
    border-width: 0px;
    border-radius: 50px;
    border-style: solid;
@@ -557,7 +583,7 @@ const Image6 = styled.img`
    `;
    const EnterAGlobalIssue1 = styled.div`
    align-self: center;
-   margin: 4px 0px;
+   margin: 4px 20px;
    font-size: 18px;
    font-weight: 500;
    font-family: Montserrat;
@@ -570,13 +596,13 @@ const Image6 = styled.img`
    font-weight: 500;
    font-family: Montserrat;
    `;
-   const Image3 = styled.img`
+  const Image3 = styled.img`
    min-width: 0px;
    min-height: 0px;
    align-self: flex-end;
    margin: 3px 0px 0px 0px;
    box-sizing: border-box;
-   `;
+`;
    const EmailButton = styled.button`
    width: 437px;
    height: 278px;
@@ -620,7 +646,7 @@ const Image6 = styled.img`
    font-family: Montserrat;
    box-sizing: border-box;
    `;
-   const Image2 = styled.img`
+   {/*const Image2 = styled.img`
    width: 609px;
    min-width: 0px;
    height: 533px;
@@ -629,21 +655,19 @@ const Image6 = styled.img`
    top: 0px;
    position: absolute;
    box-sizing: border-box;
-   `;
+`;*/}
    const OliveGreenRectangle = styled.button`
    width: 222px;
    height: 56px;
    left: 448px;
-   top: 453px;
+   top: 505px;
    position: absolute;
    display: flex;
    flex-direction: column;
    justify-content: flex-start;
    padding: 0px;
-   padding-top: 15px;
-   padding-right: 38px;
-   padding-bottom: 17px;
-   padding-left: 38px;
+   padding-right: 15px;
+   padding-left: 15px;
    border-width: 0px;
    border-radius: 50px;
    border-style: solid;
@@ -656,8 +680,8 @@ const Image6 = styled.img`
    } ;
    `;
    const Text1 = styled.div`
-   align-self: flex-end;
-   margin: 0px 0px 0px 1px;
+   align-self: center;
+   margin: 16px 0px 0px 0px;
    color: #ffffff;
    font-size: 20px;
    font-weight: 500;
@@ -665,5 +689,5 @@ const Image6 = styled.img`
    text-align: center;
    box-sizing: border-box;
    `;
-
+  
    export default HomePage
