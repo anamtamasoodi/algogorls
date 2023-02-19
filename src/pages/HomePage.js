@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Header from "./Header";
+import Footer from "./Footer";
 import HeroGraphic from '../images/HeroGraphic.png';
 import Smog from '../images/Smog.svg';
 import ArrowDown from '../images/Arrow-Down.png';
@@ -37,7 +38,7 @@ gap: 103px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
-padding: 0px 0px 175px 0px;
+padding: 0px 0px 10px 0px;
 box-sizing: border-box;
 background-color: #f3f3f3;
 overflow: hidden;
@@ -47,17 +48,7 @@ return (
    <HomePage>
       <Header>
       </Header>
-      <Text8>
-      Made by Team AlgoGorls at ElleHacks
-      <Paragraph6>
-         <br />
-         UI/UX Designer: Kelly Owenya
-         <br />
-         Front-End Developer: Anamta Masoodi
-         <br />
-         Back-End Developer: Cecelia Nydam
-      </Paragraph6>
-      </Text8>
+      
       <Paragraph5>
       Environmentalists?
       <br />
@@ -77,10 +68,7 @@ return (
          <Group3>
             <TropicalRainForestRectangle
             onClick={(e) =>
-               GenerateNowButton(
-                  e,
-                  "TropicalRainForestRectangle"
-               )
+               window.location.href = '/GenerationPage'
             }
             >
             <Text5>Generate an email</Text5>
@@ -118,7 +106,6 @@ return (
       </Element1>
       </Group>
       <Group1>
-      <Logo src={Logo1} />
       <Paragraph3>
          At EcoEcho, we believe that the health of our planet is one of the
          most important issues we face today. The Earth is our home, and we are
@@ -146,6 +133,8 @@ return (
          <Text1>Generate Now</Text1>
       </OliveGreenRectangle>
       </Group1>
+      <Footer>
+      </Footer>
    </HomePage>
 );
 };

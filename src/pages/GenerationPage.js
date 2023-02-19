@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Header from "./Header";
+import Footer from "./Footer";
 import "./Components.css";
+import Sitting from '../images/Sitting.svg';
+import { Redirect } from 'react-router-dom';
 
 const GenerationPage = ({}) => {
     const [name , setName] = useState('');
@@ -30,8 +33,7 @@ const GenerationPage = ({}) => {
     }
 
     const handleSubmit=(e)=>{ 
-        alert('A form was submitted with Name :"' + name +
-        '" , location :"'+location +'" and issue :"' + issue + '"');
+        window.location.href = '/ResultsPage'
     }
 
     const OliveGreenRectangle1Function = (e, name) => {
@@ -73,52 +75,52 @@ const GenerationPage = ({}) => {
         <Text8>Write now, right now.</Text8>
         <Paragraph4>Use our AI-powered generator to write persuasive and effective text instantly.</Paragraph4>
         <div>
-            <form onSubmit={handleSubmit} margin-right="300px">
+            <form onSubmit={handleSubmit} margin-right="100px">
                 <fieldset className="wrapper">
                     <label>
                     <EnterYourName>What's your full name?</EnterYourName>
-                    <br></br>
+                    <br />
                     <input type="text" value={name} required onChange={handleNameChange} />
                     </label>
-                    <br></br>
+                    <br />
                     <label>
-                    <br></br>
+                    <br />
                     <EnterYourName>Where are you located?</EnterYourName>
-                    <br></br>
+                    <br />
                     <input type="text" value={location} required onChange={handleLocationChange}  />
-                    <br></br>
+                    <br />
                     </label>
-                    <br></br>
+                    <br />
                     <label>
                     <EnterYourName>What issue are you concerned about?</EnterYourName>
-                    <br></br>
+                    <br />
                     <input type="text" value={issue} required onChange={handleIssueChange} />
-                    <br></br>
+                    <br />
                     </label>
-                    <br></br>
+                    <br />
                     <label>
                     <EnterYourName>What's your story?</EnterYourName>
-                    <br></br>
+                    <br />
                     <input type="text" value={story} required onChange={handleStoryChange} />
-                    <br></br>
+                    <br />
                     </label>
+                    <br />
                     <label>
                     <EnterYourName>What facts would you like to include?</EnterYourName>
-                    <br></br>
+                    <br />
                     <input type="text" value={facts} required onChange={handleFactsChange} />
-                    <br></br>
+                    <br />
                     </label>
+                    <br />
                     <input type="submit" value="Submit"/>
                 </fieldset>
             </form>
         </div>
 
-                <Image1
-                    src={`https://file.rendit.io/n/GJC58eQ8WbxwKj2qd0ZW.svg`}
-                />
-                
-                <Group5>
+                <Image1 src={Sitting}/>
                 <Text6>Personalize it!</Text6>
+                <Group5>
+                
                 <Paragraph3>
                     Just because it’s machine generated doesn’t mean it can’t be
                     unique to you — fill out these (optional) fields to put your own
@@ -161,22 +163,9 @@ const GenerationPage = ({}) => {
         </OliveGreenRectangle>
         <Group1>
             <Image5 src={`https://file.rendit.io/n/1bPayeoPwQoNopEHqihM.svg`} />
-            <Image4 src={`https://file.rendit.io/n/WyNqefBmMPwfMlAjEUn4.svg`} />
-            <Image3 src={`https://file.rendit.io/n/HQwtsgIiUq8nbtVZeOmZ.svg`} />
-            <Image2 src={`https://file.rendit.io/n/oudRdg59ZsA3un5197zs.svg`} />
-            <Text12>
-            Made by Team AlgoGorls at ElleHacks
-            <Paragraph5>
-                <br />
-                UI/UX Designer: Kelly Owenya
-                <br />
-                Front-End Developer: Anamta Masoodi
-                <br />
-                Back-End Developer: Cecelia Nydam
-            </Paragraph5>
-            </Text12>
-            <Image1 src={`https://file.rendit.io/n/50xiCbEwHSkpnJk8czFj.png`} />
         </Group1>
+        <Footer>
+        </Footer>
         </div>
     );
 };
@@ -189,10 +178,12 @@ const EnterYourName = styled.div`
     font-family: Montserrat;
 `;
 const Image1 = styled.img`
-  min-width: 0px;
-  min-height: 0px;
-  position: relative;
-  box-sizing: border-box;
+min-width: 0px;
+min-height: 0px;
+position: relative;
+box-sizing: border-box;
+top: -450px;
+margin-left: 800px;
 `;
 
 const Group = styled.div`
@@ -336,8 +327,8 @@ const Group3 = styled.div`
 const Text6 = styled.div`
   width: 893px;
   height: 203px;
-  left: 375px;
-  top: 427px;
+  left: 360px;
+  top: 950px;
   position: absolute;
   display: flex;
   flex-wrap: wrap;
