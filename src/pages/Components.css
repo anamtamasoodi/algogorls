@@ -1,0 +1,52 @@
+.Header{
+    background-color: #dadada;
+    min-height: vh;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .GenerateNowRectangle {
+    width: 150px;
+    display: flex;
+    margin-right: auto;
+    margin-top: 30px;
+    padding: 0px;
+    padding-top: 15px;
+    padding-right: 38px;
+    padding-bottom: 17px;
+    padding-left: 38px;
+    border-width: 5px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: #70853b;
+    box-sizing: content-box;
+    background-color: #96ac51;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+ 
+.GenerateNowRectangle:hover {
+  opacity: 70%;
+}
+
+.GenerateNowText {
+  align-self: flex-end;
+  margin: 0px 0px 0px 1px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Montserrat;
+  text-align: center;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.wrapper {
+  padding: 5px 20px;
+  margin: 5px;
+}
+

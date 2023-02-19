@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useEffect, useState} from "react";
 
 function ResultsPage() {
@@ -26,3 +27,26 @@ function ResultsPage() {
 }
 
 export default ResultsPage;
+=======
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import Header from "./Header";
+
+
+const ResultsPage = ({}) => {
+
+    return (
+        <div>
+        <Header>
+        </Header>
+        </div>
+    );
+
+};
+
+
+export default ResultsPage
+
+            
+          
+>>>>>>> dae30c317b66a29bcd63cad58ba4873cc6c067ce

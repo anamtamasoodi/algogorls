@@ -28,7 +28,10 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/GenerationPage" element={<GenerationPage />} />
       <Route path="/ResultsPage" element={<ResultsPage />} />
+<<<<<<< HEAD
 
+=======
+>>>>>>> dae30c317b66a29bcd63cad58ba4873cc6c067ce
       </Routes>
 
     </BrowserRouter>

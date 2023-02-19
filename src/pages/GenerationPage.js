@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import Header from "./Header";
+import "./Components.css";
 
 
 const GenerationPage = ({}) => {
@@ -8,7 +10,10 @@ const GenerationPage = ({}) => {
     const [issue , setIssue] = useState('');
     const [story , setStory] = useState('');
     const [facts , setFacts] = useState('');
+<<<<<<< HEAD
 
+=======
+>>>>>>> dae30c317b66a29bcd63cad58ba4873cc6c067ce
 
     const handleNameChange =(e)=>{
         setName(e.target.value);
@@ -85,6 +90,11 @@ const GenerationPage = ({}) => {
 
     return (
         <div>
+<<<<<<< HEAD
+=======
+        <Header>
+        </Header>
+>>>>>>> dae30c317b66a29bcd63cad58ba4873cc6c067ce
         <Text8>Write now, right now.</Text8>
         <Paragraph4>Use our AI-powered generator to write persuasive and effective text instantly.</Paragraph4>
         <div>
